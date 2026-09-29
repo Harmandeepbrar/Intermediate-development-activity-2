@@ -38,3 +38,11 @@ class Rectangle(Shape):
             float: The area of the rectangle.
         """
         return self.__length * self.__width
+
+    def get_perimeter(self) -> float:
+        """Return the perimeter of the rectangle.
+
+        Returns:
+            float: The perimeter of the rectangle.
+        """
+        return (2 * self.__length) + (2 * self.__width)
