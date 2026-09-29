@@ -29,3 +29,12 @@ class Rectangle(Shape):
             raise ValueError("width must be a value greater than zero")
         self.__length = length
         self.__width = width
+
+    @property
+    def area(self) -> float:
+        """Return the area of the rectangle.
+        
+        Returns:
+            float: The area of the rectangle.
+        """
+        return self.__length * self.__width
