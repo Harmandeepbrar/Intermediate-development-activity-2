@@ -141,5 +141,20 @@ class TestGetPerimeter(unittest.TestCase):
         expected = 18
         self.assertEqual(expected, actual)
         
+class TestStr(unittest.TestCase):
+    """Defines tests for the __str__ method."""
+
+    def test_returns_string_representation(self) -> None:
+        # Arrange
+        triangle = Triangle("red", 5, 6, 7)
+
+        # Act
+        actual = triangle.__str__()
+
+        # Assert
+        expected = ("The shape color is red.\n"
+                    "This triangle has three sides with lengths of 5, 6, and 7 centimeters.")
+        self.assertEqual(expected, actual)
+        
 if __name__ == "__main__":
     unittest.main()
