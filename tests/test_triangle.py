@@ -100,6 +100,19 @@ class TestInit(unittest.TestCase):
         self.assertEqual(5, triangle._Triangle__side_1)
         self.assertEqual(6, triangle._Triangle__side_2)
         self.assertEqual(7, triangle._Triangle__side_3)
+        
+class TestColorProperty(unittest.TestCase):
+    """Tests for the color property."""
+    def test_returns_current_state(self) -> None:
+        # Arrange
+        triangle = Triangle("red", 5, 6, 7)
+
+        # Act
+        actual = triangle.color
+
+        # Assert
+        expected = "red"
+        self.assertEqual(expected, actual)
 
 if __name__ == "__main__":
     unittest.main()
