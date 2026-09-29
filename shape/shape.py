@@ -37,3 +37,19 @@ class Shape(ABC):
         Returns:
             float: The area of the shape.
         """
+        
+    @abstractmethod
+    def get_perimeter(self) -> float:
+        """Gives the perimeter of the shape.
+
+        Returns:
+            float: The perimeter of the shape.
+        """
+
+    def __str__(self) -> str:
+        """Gives the informal string representation of the shape.
+
+        Returns:
+            str: The informal string representation of the shape.
+        """
+        return f"The shape color is {self.__color}."
