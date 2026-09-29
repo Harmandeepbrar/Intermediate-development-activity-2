@@ -127,5 +127,19 @@ class TestAreaProperty(unittest.TestCase):
         expected = 14.696938456699069
         self.assertAlmostEqual(expected, actual)
         
+class TestGetPerimeter(unittest.TestCase):
+    """Defines tests for the get_perimeter method."""
+
+    def test_returns_perimeter_of_triangle(self) -> None:
+        # Arrange
+        triangle = Triangle("red", 5, 6, 7)
+
+        # Act
+        actual = triangle.get_perimeter()
+
+        # Assert
+        expected = 18
+        self.assertEqual(expected, actual)
+        
 if __name__ == "__main__":
     unittest.main()
