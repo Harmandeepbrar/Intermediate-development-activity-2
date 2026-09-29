@@ -46,3 +46,12 @@ class Rectangle(Shape):
             float: The perimeter of the rectangle.
         """
         return (2 * self.__length) + (2 * self.__width)
+    
+    def __str__(self) -> str:
+        """Return the string representation of rectangle.
+
+        Returns:
+            str: The string representation of the rectangle.
+        """
+        return (f"{super().__str__()}\n"
+                f"This rectangle has a length of {self.__length}cm and a width of {self.__width}cm.")
