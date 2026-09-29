@@ -3,7 +3,7 @@
 __author__ = "Harmandeep Brar"
 __version__ = "1.0.0"
 from shape.shape import Shape
-
+from math import sqrt
 
 class Triangle(Shape):
     """Represents a geometric shape formed by connecting three points 
@@ -42,3 +42,13 @@ class Triangle(Shape):
         self.__side_1 = side_1
         self.__side_2 = side_2
         self.__side_3 = side_3
+        
+    @property
+    def area(self) -> float:
+        """Gives the area of the triangle.
+
+        Returns:
+            float: The area of the triangle.
+        """
+        sp = (self.__side_1 + self.__side_2 + self.__side_3)/ 2
+        return sqrt(sp * (sp - self.__side_1) * (sp - self.__side_2) * (sp - self.__side_3))
