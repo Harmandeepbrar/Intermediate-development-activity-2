@@ -53,3 +53,4 @@ class Shape(ABC):
             str: The informal string representation of the shape.
         """
         return f"The shape color is {self.__color}."
+    
