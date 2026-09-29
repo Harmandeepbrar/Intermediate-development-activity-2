@@ -114,5 +114,18 @@ class TestColorProperty(unittest.TestCase):
         expected = "red"
         self.assertEqual(expected, actual)
 
+class TestAreaProperty(unittest.TestCase):
+    """Defines tests for the area property."""
+    def test_returns_area_of_triangle(self) -> None:
+        # Arrange
+        triangle = Triangle("red", 5, 6, 7)
+
+        # Act
+        actual = triangle.area
+
+        # Assert
+        expected = 14.696938456699069
+        self.assertAlmostEqual(expected, actual)
+        
 if __name__ == "__main__":
     unittest.main()
