@@ -20,3 +20,20 @@ class Shape(ABC):
         if color == "":
             raise ValueError("color cannot be blank")
         self.__color = color
+
+    @property
+    def color(self) -> str:
+        """Gives the color of the shape.
+
+        Returns:
+            str: The color of the shape.
+        """
+        return self.__color
+
+    @abstractmethod
+    def area(self) -> float:
+        """Gives the area of the shape.
+
+        Returns:
+            float: The area of the shape.
+        """
