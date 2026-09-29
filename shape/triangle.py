@@ -52,3 +52,20 @@ class Triangle(Shape):
         """
         sp = (self.__side_1 + self.__side_2 + self.__side_3)/ 2
         return sqrt(sp * (sp - self.__side_1) * (sp - self.__side_2) * (sp - self.__side_3))
+
+    def get_perimeter(self) -> float:
+        """Gives the perimeter of triangle.
+
+        Returns:
+            float: The perimeter of triangle.
+        """
+        return self.__side_1 + self.__side_2 + self.__side_3
+
+    def __str__(self) -> str:
+        """Returns informal string representation of triangle.
+
+        Returns:
+            str: The informal string representation of triangle.
+        """
+        return (f"{super().__str__()}\n"
+                f"This triangle has three sides with lengths of {self.__side_1}, {self.__side_2}, and {self.__side_3} centimeters.")
