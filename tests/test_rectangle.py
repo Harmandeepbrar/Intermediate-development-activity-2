@@ -63,3 +63,18 @@ class TestInit(unittest.TestCase):
         self.assertEqual("red", rectangle._Shape__color)
         self.assertEqual(5, rectangle._Rectangle__length)
         self.assertEqual(6, rectangle._Rectangle__width)
+        
+        
+class TestColorProperty(unittest.TestCase):
+    """Tests for the color property."""
+
+    def test_returns_current_state(self) -> None:
+        # Arrange
+        rectangle = Rectangle("red", 5, 6)
+
+        # Act
+        actual = rectangle.color
+
+        # Assert
+        expected = "red"
+        self.assertEqual(expected, actual)
