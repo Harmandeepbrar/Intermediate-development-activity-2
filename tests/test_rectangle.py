@@ -92,3 +92,17 @@ class TestAreaProperty(unittest.TestCase):
         # Assert
         expected = 30
         self.assertEqual(expected, actual)
+        
+class TestGetPerimeter(unittest.TestCase):
+    """Tests for the get_perimeter method."""
+
+    def test_returns_perimeter_of_rectangle(self) -> None:
+        # Arrange
+        rectangle = Rectangle("red", 5, 6)
+
+        # Act
+        actual = rectangle.get_perimeter()
+
+        # Assert
+        expected = 22
+        self.assertEqual(expected, actual)
