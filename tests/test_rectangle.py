@@ -78,3 +78,17 @@ class TestColorProperty(unittest.TestCase):
         # Assert
         expected = "red"
         self.assertEqual(expected, actual)
+        
+class TestAreaProperty(unittest.TestCase):
+    """Tests for the area property."""
+
+    def test_returns_area_of_rectangle(self) -> None:
+        # Arrange
+        rectangle = Rectangle("red", 5, 6)
+
+        # Act
+        actual = rectangle.area
+
+        # Assert
+        expected = 30
+        self.assertEqual(expected, actual)
